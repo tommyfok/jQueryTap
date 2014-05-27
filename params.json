@@ -1,0 +1,1 @@
+{"name":"jQuery Tap plugin","tagline":"jQueryPlugin : Tap","body":"jQuery触屏插件：Tap，使用方法非常简单，例：\r\n<pre>\r\n$(\"#domid\").tap(function(){\r\n\talert(\"You tapped me! -- by\"+this.innerText);\r\n});\r\n</pre>\r\n依赖jquery 1.7+","google":"","note":"Don't delete this file! It's used internally to help with page regeneration."}
