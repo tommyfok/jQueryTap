@@ -17,6 +17,7 @@
         background-color:#aaa;
         color:#FFF;
         position:relative;
+        text-align:center;
         -webkit-transition:all .3s ease-out;
         -moz-transition:all .3s ease-out;
         -ms-transition:all .3s ease-out;
@@ -32,6 +33,10 @@
         display:block;
         top:0;
         right:0;
+        font-size:12px;
+        background:rgba(0,0,0,0.5);
+        color:#FFF;
+        border-radius:0 5px 0 5px;
       }
     </style>
     <title>jQuery Tap plugin</title>
@@ -66,15 +71,15 @@ $(".item").tap(function(){
 </pre>
 
 <p>依赖jquery 1.7+</p>
-      </section>
-      <section>
+      <div>
         <div>Just try it！</div>
         <div class="item">hey.</div>
         <div class="item">hey.</div>
         <div class="item">hey.</div>
         <div class="item">hey.</div>
-      </section>
+      </div>
     </div>
+      </section>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
@@ -84,7 +89,14 @@ $(".item").tap(function(){
       </footer>
     </div>
 
-    
+    <script>
+      // example script
+      $(function(){
+        $(".item").tap(function(){
+            $(this).toggleClass("active");
+        });
+      });
+    </script>
 
   </body>
 </html>
