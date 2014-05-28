@@ -25,9 +25,11 @@ $.fn.tap = function(fn){
 			i.endX = p.clientX;
 			i.endY = p.clientY;
 		});
-		$(i.target).on(tend,function(){
+		$(i.target).on(tend,function(e){
 			if((+ new Date)-i.startTime<300){
 				if(Math.abs(i.endX-i.startX)+Math.abs(i.endY-i.startY)<20){
+					var e = e || window.event;
+					e.preventDefault();
 					fn.call(i.target);
 				}
 			}
