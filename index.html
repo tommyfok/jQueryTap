@@ -7,7 +7,33 @@
     <meta name="description" content="jQuery Tap plugin : jQueryPlugin : Tap" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
+    <style>
+      /* temp style for example */
+      .item{
+        padding:5px;
+        margin:10px;
+        line-height:30px;
+        border-radius:5px;
+        background-color:#aaa;
+        color:#FFF;
+        position:relative;
+        -webkit-transition:all .3s ease-out;
+        -moz-transition:all .3s ease-out;
+        -ms-transition:all .3s ease-out;
+        -o-transition:all .3s ease-out;
+        transition:all .3s ease-out;
+      }
+      .item.active{
+        background-color:#369;
+        color:#FFF;
+      }
+      .item.active:after{
+        content:"Tapped";
+        display:block;
+        top:0;
+        right:0;
+      }
+    </style>
     <title>jQuery Tap plugin</title>
   </head>
 
@@ -34,12 +60,19 @@
         <p>jQuery触屏插件：Tap，使用方法非常简单，例：</p>
 
 <pre>
-$("#domid").tap(function(){
-    alert("You tapped me! -- by"+this.innerText);
+$(".item").tap(function(){
+    $(this).toggleClass("active");
 });
 </pre>
 
 <p>依赖jquery 1.7+</p>
+      </section>
+      <section>
+        <div>Just try it！</div>
+        <div class="item">hey.</div>
+        <div class="item">hey.</div>
+        <div class="item">hey.</div>
+        <div class="item">hey.</div>
       </section>
     </div>
 
