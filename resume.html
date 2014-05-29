@@ -162,8 +162,10 @@
 			} #resumeSet { position: relative } .m_portrait div { background: url(http://www.lagou.com:80/images/profile_cover.png)
 			no-repeat; width: 120px; height: 120px; position: absolute; z-index: 5;
 			}
-			#box-game{border-radius:3px;display:block;position:relative;box-shadow:0 0 10px rgba(0,0,0,0.5);overflow:hidden;width:320px;height:600px;margin:20px auto;}
-			#iframe-game{border-radius:3px;width:320px;height:600px;}
+			.box-mobile{display:block;position:relative;box-shadow:0 0 10px rgba(0,0,0,0.5);width:320px;height:600px;margin:20px auto;}
+			.iframe-mobile{width:320px;height:600px;}
+			.qrcode-mobile{position:absolute;left:-220px;top:0;}
+			.qrcode-mobile img{border:none;width:200px;height:200px;}
 		</style>
 	</head>
 	<body>
@@ -413,8 +415,9 @@
 											http://www.ivi-uk.com/game/02/
 										</a>
 									</div>
-									<div id="box-game">
-										<iframe id="iframe-game" src="http://www.ivi-uk.com/game/02/" frameborder="0" width="320" height="600"></iframe>
+									<div class="box-mobile">
+										<iframe class="iframe-mobile" src="http://www.ivi-uk.com/game/02/" frameborder="0" width="320" height="600"></iframe>
+										<div class="qrcode-mobile"><img src="images/qrcode_game.jpg"></div>
 									</div>
 									<p>
 										★ FlappyBird【游戏】Demo
