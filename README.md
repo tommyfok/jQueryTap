@@ -7,4 +7,4 @@ $("#domid").tap(function(){
 	alert("You tapped me! -- by"+this.innerText);
 });
 </pre>
-依赖jquery 1.7+
+依赖 zepto 1.0+ / jquery 1.7+
