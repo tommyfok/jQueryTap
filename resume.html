@@ -21,6 +21,9 @@
 		<!-- <div class="web_root" style="display:none">http://www.lagou.com</div> -->
 		<link rel="Shortcut Icon" href="http://www.lagou.com/images/favicon.ico">
 		<style>
+	*{
+		word-break:break-all;
+	}
 	html {
 		height:100%
 	}
@@ -752,6 +755,12 @@
 		border:none;
 		width:200px;
 		height:200px;
+	}
+	@media all and (max-width:480px){
+		.box-mobile,
+		.qrcode-mobile,
+		.qrcode-mobile img,
+		.iframe-mobile{display:none;}
 	}
 		</style>
 	</head>
