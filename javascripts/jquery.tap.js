@@ -1,7 +1,4 @@
 $.fn.tap = function(fn){
-	if(!("_tommyfoks_tapPlugin" in window)){
-		window._tommyfoks_tapPlugin = [];
-	}
 	var collection = this,
 		isTouch = "ontouchend" in document.createElement("div"),
 		tstart = isTouch ? "touchstart" : "mousedown",
@@ -11,7 +8,6 @@ $.fn.tap = function(fn){
 	collection.each(function(){
 		var i = {};
 		i.target = this;
-		_tommyfoks_tapPlugin.push(i);
 		$(i.target).on(tstart,function(e){
 			var p = "touches" in e ? e.touches[0] : (isTouch ? window.event.touches[0] : window.event);
 			i.startX = p.clientX;
@@ -25,9 +21,11 @@ $.fn.tap = function(fn){
 			i.endX = p.clientX;
 			i.endY = p.clientY;
 		});
-		$(i.target).on(tend,function(){
+		$(i.target).on(tend,function(e){
 			if((+ new Date)-i.startTime<300){
 				if(Math.abs(i.endX-i.startX)+Math.abs(i.endY-i.startY)<20){
+					var e = e || window.event;
+					e.preventDefault();
 					fn.call(i.target);
 				}
 			}
