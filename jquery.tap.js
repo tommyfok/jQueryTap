@@ -1,7 +1,4 @@
 $.fn.tap = function(fn){
-	if(!("_tommyfoks_tapPlugin" in window)){
-		window._tommyfoks_tapPlugin = [];
-	}
 	var collection = this,
 		isTouch = "ontouchend" in document.createElement("div"),
 		tstart = isTouch ? "touchstart" : "mousedown",
@@ -11,7 +8,6 @@ $.fn.tap = function(fn){
 	collection.each(function(){
 		var i = {};
 		i.target = this;
-		_tommyfoks_tapPlugin.push(i);
 		$(i.target).on(tstart,function(e){
 			var p = "touches" in e ? e.touches[0] : (isTouch ? window.event.touches[0] : window.event);
 			i.startX = p.clientX;
