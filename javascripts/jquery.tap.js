@@ -1,6 +1,6 @@
 $.fn.tap = function(fn){
 	var collection = this,
-		isTouch = "ontouchend" in document.createElement("div"),
+		isTouch = "ontouchend" in document.body,
 		tstart = isTouch ? "touchstart" : "mousedown",
 		tmove = isTouch ? "touchmove" : "mousemove",
 		tend = isTouch ? "touchend" : "mouseup",
