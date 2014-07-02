@@ -1,0 +1,14 @@
+{
+  "name": "jQueryTap",
+  "version": "0.1.0",
+  "main": "jquery.tap.js",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt",
+    ".md"
+  ],
+  "dependencies": {
+    "jquery": "~1.11.1"
+  },
+  "devDependencies": {}
+}
