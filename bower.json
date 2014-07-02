@@ -1,14 +1,24 @@
 {
   "name": "jQueryTap",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "jquery.tap.js",
+  "authors": [
+    "TommyFok <154274174@qq.com>"
+  ],
+  "description": "jquery tap plugin",
+  "keywords": [
+    "jquery",
+    "tap"
+  ],
+  "license": "WTFPL",
   "ignore": [
-    ".jshintrc",
-    "**/*.txt",
-    ".md"
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
   ],
   "dependencies": {
     "jquery": "~1.11.1"
-  },
-  "devDependencies": {}
+  }
 }
