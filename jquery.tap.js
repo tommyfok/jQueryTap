@@ -37,4 +37,4 @@ $.fn.tap = function(fn){
 		});
 	});
 	return collection;
-}
+};
